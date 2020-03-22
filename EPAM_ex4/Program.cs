@@ -7,6 +7,11 @@ namespace EPAM_ex4
         static void Main(string[] args)
         {
             int num = Int32.Parse(Console.ReadLine());
+            if (num < 0)
+            {
+                Console.WriteLine("Число не может быть меньше нуля!");
+                num = 0;
+            }
             Console.WriteLine(Factorial(num));
         }
         static int Factorial(int x)
